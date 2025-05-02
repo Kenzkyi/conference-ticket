@@ -1,0 +1,310 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+}
+.app{
+  min-height: 100dvh;
+  width: 100%;
+  background: url('./assets/images/background-desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 180px;
+
+  h1{
+    width: 650px;
+    font-size: 45px;
+    display: flex;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media screen and (max-width:480px) {
+      width: 95%;
+      font-size: 26px;
+    }
+  }
+
+  h2{
+    color: gainsboro;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+}
+.app-backgroundImg{
+  min-height: 100dvh;
+  width: 100%;
+  position: absolute;
+}
+
+.app-patternCircle{
+  position: absolute;
+  bottom: 15%;
+  right: 15%;
+}
+
+.app-leftBottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.rightTop{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.app-iconTop{
+  height: 30px;
+  width: 190px;
+
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.app-holder{
+  min-height: 60dvh;
+  width: 25%;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  gap: 10px;
+
+  main{
+    width: 100%;
+    min-height: 140px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    
+    label{
+      color: white;
+      font-size: 16px;
+    }
+    
+    nav{
+      min-height: 90px;
+      width: 100%;
+      border-radius: 10px;
+      background-color: hsla(247, 16%, 31%, 0.384);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      position: relative;
+
+      p{
+        color: hsl(252, 6%, 83%);
+        font-size: 12px;
+      }
+
+      .app-changeImage{
+        height: 30px;
+        width: 30px;
+        background-color: hsla(246, 15%, 58%, 0.288);
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+          height: 70%;
+          width: 70%;
+        }
+      }
+
+      header{
+        height: 40px;
+        width: 40px;
+
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      
+      footer{
+        display: flex;
+        gap: 5px;
+        z-index: 2;
+
+        button{
+          padding: 3px;
+          color: white;
+          background-color:  hsla(246, 15%, 58%, 0.288);
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+
+        label{
+          padding: 3px;
+          color: white;
+          background-color:  hsla(246, 15%, 58%, 0.288);
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    nav::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+      linear-gradient(to right, #a5a5a5 50%, transparent 50%),
+      linear-gradient(to right, #a5a5a5 50%, transparent 50%),
+      linear-gradient(to bottom, #a5a5a5 50%, transparent 50%),
+      linear-gradient(to bottom, #a5a5a5 50%, transparent 50%);
+    background-size:
+      10px 0.5px,
+      10px 0.5px,
+      0.5px 10px,
+      0.5px 10px;
+      background-position:
+        0 0,
+        0 100%,
+        0 0,
+        100% 0;
+      background-repeat:
+        repeat-x,
+        repeat-x,
+        repeat-y,
+        repeat-y;
+      border-radius: 5px;
+    }
+
+    nav:hover{
+      cursor: pointer;
+      background-color: hsla(246, 15%, 58%, 0.425);
+    }
+
+    small{
+      color: hsl(245, 15%, 58%);
+      font-size: 9px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      div{
+        height: 15px;
+        width: 15px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  section{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    label{
+      font-size: 16px;
+      color: white;
+    }
+
+    input{
+      height: 35px;
+      width: 100%;
+      border-radius: 7px;
+      background-color: hsla(247, 16%, 31%, 0.384);
+      border: 1px solid rgb(171, 171, 171);
+      padding: 7px;
+      outline: none;
+      color: white;
+    }
+  }
+
+  article{
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 7px;
+
+    label{
+      font-size: 16px;
+      color: white;
+    }
+
+    input{
+      height: 35px;
+      width: 100%;
+      border-radius: 7px;
+      background-color: hsla(247, 16%, 31%, 0.384);
+      border: 1px solid rgb(171, 171, 171);
+      padding: 7px;
+      outline: none;
+      color: white;
+    }
+
+    small{
+      color: red;
+      font-size: 9px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      div{
+        height: 15px;
+        width: 15px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .app-generateTicket{
+    height: 35px;
+    width: 100%;
+    border-radius: 7px;
+    background-color: hsl(7, 71%, 60%);
+    border: none;
+    padding: 7px;
+    outline: none;
+    color: hsl(248, 70%, 10%);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  input:hover{
+    cursor: pointer;
+    background-color: hsla(246, 15%, 58%, 0.425);
+  }
+
+  @media screen and (max-width:768px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width:480px) {
+    width: 95%;
+  }
+}
