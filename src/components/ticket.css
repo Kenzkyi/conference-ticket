@@ -125,11 +125,12 @@
         top: 45%;
         font-size: 21px;
         z-index: 2;
+        color: gainsboro;
         transform: rotate(90deg);
     }
 
     @media screen and (max-width:480px) {
-        width: 95%;
+        width: 90%;
         padding-top: 30px;
         padding-bottom: 30px;
     }

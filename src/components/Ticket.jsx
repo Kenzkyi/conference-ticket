@@ -5,6 +5,8 @@ import avatarIcon from '../assets/images/image-avatar.jpg'
 import gitHub from '../assets/images/icon-github.svg'
 
 const Ticket = ({all, imageUrl}) => {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const dates = new Date
   return (
     <div className='ticket'>
       <h3>Congrats, <span>{all.fullName}!</span></h3>
@@ -15,7 +17,7 @@ const Ticket = ({all, imageUrl}) => {
             <div>
                 <img src={ticketIcon} />
             </div>
-            <h5>may 02, 2025 / Austin, TX</h5>
+            <h5>{months[dates.getMonth()]} {dates.getDate()}, {dates.getFullYear()} / Austin, TX</h5>
         </header>
         <footer>
             <nav>
