@@ -24,7 +24,7 @@ const Ticket = ({all, imageUrl}) => {
             <section>
                 <h4>{all.fullName}</h4>
                 <article><div>
-                    <img src={gitHub} /></div>@{all.gitHub}</article>
+                    <img src={gitHub} /></div> {all.gitHub}</article>
             </section>
         </footer>
         <aside>#01609</aside>
